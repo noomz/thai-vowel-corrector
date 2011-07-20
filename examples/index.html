@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Thai vowel character examples</title>
+    <style>
+      h1 { font-size: 3em; }
+      h2 { font-size: 2.6em; }
+      h3 { font-size: 2.2em; }
+      h4 { font-size: 1.8em; }
+    </style>
+  </head>
+
+  <body>
+    <p>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789</p>
+    <p>Quick brown fox jumps over the lazy dog.</p>
+    <h1 class="original">เกี่ยวข้องว่องไว</h1>
+    <h2 class="original">ไว้ลายดูกร</h2>
+    <h3 class="original">กตัญญูฤาพี่ดูเทอญ</h3>
+    <h4 class="original">ฐานที่มั่นตั้งคุ้ง คุ้มค้ำกำลังใจ</h4>
+    <h4 class="original">ท้าทั้งทิ้ง ท่าที่ บ่นบิ่น ป่าปี่ ถ้าถ้ำ การันต์</h4>
+
+    <hr>
+
+    <h1 class="fixed">เกี่ยวข้องว่องไว</h1>
+    <h2 class="fixed">ไว้ลายดูกร</h2>
+    <h3 class="fixed">กตัญญูฤาพี่ดูเทอญ</h3>
+    <h4 class="fixed">ฐานที่มั่นตั้งคุ้ง คุ้มค้ำกำลังใจ</h4>
+    <h4 class="fixed">ท้าทั้งทิ้ง ท่าที่ บ่นบิ่น ป่าปี่ ถ้าถ้ำ การันต์</h4>
+
+    <script src="https://raw.github.com/sorccu/cufon/9a0000e7228b56c02cb0ec46c593e3b4dbdf8592/js/cufon.js"></script>
+    <script src="Garuda.font.js"></script>
+    <script src="../thai-vowel-corrector.js"></script>
+    <script>
+      
+      Cufon.replace('p', { ignore : {} });
+      Cufon.replace('h1.original,h2.original,h3.original,h4.original');
+
+      Cufon.set('modifyText', correctThaiFloatingVowel);
+      Cufon.replace('h1.fixed,h2.fixed,h3.fixed,h4.fixed');
+
+    </script>
+  </body>
+</html>

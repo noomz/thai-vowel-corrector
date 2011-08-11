@@ -1088,11 +1088,6 @@ var Cufon = (function() {
 				// Insert original text, for searching, printing etc.
 				original_el = document.createElement('div');
 				original_el.setAttribute('class', 'cufon-original-text');
-				//original_el.style.display = 'inline-block';
-				//original_el.style.textIndent = '-10000in';
-				//original_el.style.textAlign = 'left';
-				//original_el.style.width = '0px';
-				//original_el.style.height = '0px';
 				original_el.appendChild(document.createTextNode(original_text));
 				el.appendChild(original_el);
 			}
@@ -1355,7 +1350,7 @@ Cufon.registerEngine('vml', (function() {
 			'cufonshy.cufon-shy-disabled,.cufon-viewport-resizing cufonshy{display:none;}' +
 			'cufonglue{white-space:nowrap;display:inline-block;}' +
 			'.cufon-viewport-resizing cufonglue{white-space:normal;}' +
-			'.cufon-original-text{display:-moz-inline-box;display:inline-block;width:0;height:0;text-align:left;text-indent:-10000in;}' +
+			'.cufon-original-text{width:0;height:0;text-align:left;text-indent:-10000in;}' +
 			'a cufon{cursor:pointer}' + // ignore !important here
 		'}' +
 		'@media print{' +
@@ -1614,7 +1609,7 @@ Cufon.registerEngine('canvas', (function() {
 			'cufonshy.cufon-shy-disabled,.cufon-viewport-resizing cufonshy{display:none;}' +
 			'cufonglue{white-space:nowrap;display:inline-block;}' +
 			'.cufon-viewport-resizing cufonglue{white-space:normal;}' +
-			'.cufon-original-text{display:-moz-inline-box;display:inline-block;width:0;height:0;text-align:left;text-indent:-10000in;}' +
+			'.cufon-original-text{width:0;height:0;text-align:left;text-indent:-10000in;}' +
 		'}' +
 		'@media print{' +
 			'cufon{padding:0;}' + // Firefox 2

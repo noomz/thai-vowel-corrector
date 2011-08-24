@@ -1,26 +1,26 @@
 /*!
  * Copyright (c) 2011 Opendream Co., LTD. (http://opendream.co.th)
  * Licensed under the MIT license.
- * 
+ *
  * Based on algorithm from jthaipdf (http://code.google.com/p/jthaipdf).
  */
 
 /**
  * Replace floating vowel with proper private Thai unicode characters. Main use
  * with cufon (http://cufon.shoqolate.com).
- * 
+ *
  * @param Original text.
  * @return Modified text.
  */
 var correctThaiFloatingVowel = (function () {
-	
+
 	/**
 	 * @return string from character code provided.
 	 */
 	var _ = function (code) {
 		return String.fromCharCode(code);
 	};
-	
+
 	var
 		// Lower level characters
 		SARA_U  = _(0xE38),
@@ -116,7 +116,7 @@ var correctThaiFloatingVowel = (function () {
 			// Exploded SARA_AM to NIKHAHIT + SARA_AA
 			for (i = 0; i < content.length; i++) {
 				ch = content[i];
-				
+
 				if (i < content.length - 1  && content[i + 1] == SARA_AM) {
 					if (isUpperLevel2(ch)) {
 						newContent += NIKHAHIT;
@@ -134,7 +134,7 @@ var correctThaiFloatingVowel = (function () {
 					newContent += ch;
 				}
 			}
-			
+
 			return newContent;
 		};
 
@@ -320,7 +320,7 @@ var correctThaiFloatingVowel = (function () {
 					content[i] = shiftLeft(ch);
 				}
 				else if (isUpperLevel2(ch)) {
-					
+
 					// Level 2
 					if (isLowerLevel(pch)) {
 						pch = content[i - 2];
@@ -1655,7 +1655,7 @@ Cufon.registerEngine('canvas', (function() {
 
 		var redraw = (text === null);
 
-		if (redraw) text = node.getAttribute('alt');console.log(node);
+		if (redraw) text = node.getAttribute('alt');
 
 		var viewBox = font.viewBox;
 

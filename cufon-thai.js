@@ -1087,9 +1087,9 @@ var Cufon = (function() {
 
 				// Insert original text, for searching, printing etc.
 				original_el = document.createElement('div');
-				original_el.className = 'cufon-original-text';
 				original_el.appendChild(document.createTextNode(original_text));
 				el.appendChild(original_el);
+				original_el.className = 'cufon-original-text';
 			}
 			if (type == 1) {
 				if (node.firstChild) {
